@@ -103,7 +103,7 @@ Or use **Docker** (see [Running with Docker](#running-with-docker)).
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/samuraigpt/vibe-workflow.git
+   git clone https://github.com/generalizingai/vibe-workflow.git
    cd vibe-workflow
    ```
 
