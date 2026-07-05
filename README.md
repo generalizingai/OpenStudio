@@ -24,23 +24,34 @@ OpenStudio bundles a full suite of generative-media tools behind one clean, lime
 
 ---
 
-## Quick Start
+## One-command install
 
-**Prerequisites:** [Node.js](https://nodejs.org/) v18+ and a [MuAPI access key](https://muapi.ai/access-keys).
+Copy, paste, run - it clones, installs, builds and launches OpenStudio on `localhost`, then opens your browser.
+
+**macOS / Linux**
 
 ```bash
-# Clone
-git clone https://github.com/generalizingai/OpenStudio.git
-cd OpenStudio
-
-# Install dependencies + build the workspace packages
-npm run setup
-
-# Start the web app
-npm run dev            # http://localhost:3000
+curl -fsSL https://raw.githubusercontent.com/generalizingai/OpenStudio/main/install.sh | bash
 ```
 
-You'll be prompted for your MuAPI key on first use - it's stored locally in your browser and sent only to MuAPI through the app's own proxy routes.
+**Windows (PowerShell)**
+
+```powershell
+irm https://raw.githubusercontent.com/generalizingai/OpenStudio/main/install.ps1 | iex
+```
+
+Requires [Node.js](https://nodejs.org/) 18+ and git. You'll be prompted for your [MuAPI key](https://muapi.ai/access-keys) on first use - it's stored locally in your browser and sent only to MuAPI through the app's own proxy routes.
+
+---
+
+## Manual setup
+
+```bash
+git clone https://github.com/generalizingai/OpenStudio.git
+cd OpenStudio
+npm run setup          # install dependencies + build workspace packages
+npm run dev            # http://localhost:3000
+```
 
 ### Desktop app (optional)
 
