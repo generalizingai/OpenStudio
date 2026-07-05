@@ -9,7 +9,7 @@
 body {
   background: #060707;
   color: white;
-  font-family: 'JetBrains Mono', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
@@ -84,7 +84,7 @@ nextjs-portal { display: none !important; }
 
 /* OpenStudio text wordmark - JetBrains Mono Bold */
 .logo-wordmark {
-  font-family: 'JetBrains Mono', sans-serif;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -103,7 +103,7 @@ nextjs-portal { display: none !important; }
    Cascade suite (Reels / Agent / Storyboard / Scripts / Features).
    Scoped to .openfield-studio so it never touches the top nav.
    ───────────────────────────────────────────────────────────── */
-.openfield-studio { font-family: 'JetBrains Mono', 'Inter', sans-serif; letter-spacing: -0.005em; }
+.openfield-studio { font-family: var(--font-jetbrains), 'JetBrains Mono', 'Inter', sans-serif; letter-spacing: -0.005em; }
 
 /* section-level headings step down first (plain text-3xl / titles) */
 .openfield-studio .text-3xl { font-size: 1.5rem !important; line-height: 1.15 !important; }
@@ -158,7 +158,7 @@ nextjs-portal { display: none !important; }
 
 /* Cascade headline treatment: JetBrains Mono, tight tracking, no ultra-black weight */
 .openfield-studio h1, .openfield-studio h2, .openfield-studio h3 {
-  font-family: 'JetBrains Mono', 'Inter', sans-serif !important;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', 'Inter', sans-serif !important;
   letter-spacing: -0.02em !important;
 }
 .openfield-studio .font-extrabold, .openfield-studio .font-black { font-weight: 700 !important; }
@@ -179,6 +179,9 @@ nextjs-portal { display: none !important; }
   display: inline-block;
   text-transform: lowercase !important;
   letter-spacing: -0.01em !important;
+  /* room so the gradient (background-clip:text) box doesn't clip glyph bottoms */
+  line-height: 1.3 !important;
+  padding-bottom: 0.16em;
   background-image: linear-gradient(90deg, #ffffff 35%, #d9ff3f 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -186,3 +189,4 @@ nextjs-portal { display: none !important; }
   color: transparent !important;
 }
 .openfield-studio h1 span.text-white::first-letter { text-transform: uppercase; }
+.openfield-studio h1 span.font-medium { line-height: 1.3 !important; }
