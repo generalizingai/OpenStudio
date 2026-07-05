@@ -282,11 +282,9 @@ export default function StandaloneShell() {
       {/* Header */}
       {isHeaderVisible && (
         <header className="flex-shrink-0 h-14 border-b border-white/[0.03] flex items-center justify-between px-6 bg-black/20 backdrop-blur-md z-40 gap-4">
-          {/* Left: Text-only wordmark logo */}
+          {/* Left: Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <span className="logo-wordmark text-[22px]">
-              <span className="text-white">OPEN</span><span className="text-[#d9ff3f]">STUDIO</span>
-            </span>
+            <img src="/logo.png" alt="OpenStudio" draggable="false" className="h-5 w-auto select-none" />
           </div>
 
           {/* Center: Navigation Container with fade edges */}

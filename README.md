@@ -1,8 +1,10 @@
-# OpenStudio
+<p align="center">
+  <img src="Logo.png" alt="OpenStudio" width="620">
+</p>
 
-**An open-source AI creative studio - image, video, cinema, faceless reels, a script-to-film agent and more, all powered by your own MuAPI key.**
+<p align="center"><b>An open-source AI creative studio - image, video, cinema, faceless reels, a script-to-film agent and more, all powered by your own MuAPI key.</b></p>
 
-OpenStudio bundles a full suite of generative-media tools behind one clean, lime-lit interface. Bring your [MuAPI](https://muapi.ai) access key and generate across 200+ image and video models - Nano Banana, GPT Image, Seedream, Imagen, Seedance, Kling, Veo, Sora, Hailuo and many more.
+OpenStudio bundles a full suite of generative-media tools behind one clean interface. Bring your [MuAPI](https://muapi.ai) access key and generate across 200+ image and video models - Nano Banana, GPT Image, Seedream, Imagen, Seedance, Kling, Veo, Sora, Hailuo and many more.
 
 ---
 
