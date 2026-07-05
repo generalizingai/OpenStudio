@@ -1,6 +1,6 @@
 // Cascade design system - ported from the Cascade Studio prototype and scoped under
 // `.cs-root` so it can live inside OpenField without leaking into the rest of the app.
-// Injected once via <style> by CascadeShell. Acid-lime accent, Space Grotesk display.
+// Injected once via <style> by CascadeShell. Acid-lime accent, JetBrains Mono display.
 
 export const CASCADE_CSS = `
 .cs-root{
@@ -8,14 +8,14 @@ export const CASCADE_CSS = `
   --text:#f2f2f3; --muted:#9a9aa2; --dim:#5b5b63;
   --acid:#d9ff3f; --acid-dim:rgba(217,255,63,.12);
   --jade:#4ade80; --rose:#f87171;
-  color:var(--text);font-family:'Space Grotesk','Inter',system-ui,sans-serif;font-size:13.5px;
+  color:var(--text);font-family:'JetBrains Mono','Inter',system-ui,sans-serif;font-size:13.5px;
   height:100%;overflow-y:auto;position:relative;
 }
 .cs-root *{box-sizing:border-box}
 .cs-root button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .cs-root input,.cs-root select,.cs-root textarea{font-family:inherit;color:var(--text);background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:13px;outline:none;width:100%}
 .cs-root input:focus,.cs-root select:focus,.cs-root textarea:focus{border-color:rgba(217,255,63,.4);background:#1e1e24;box-shadow:0 0 0 3px rgba(217,255,63,.06)}
-.cs-root h1,.cs-root h2,.cs-root .disp{font-family:'Space Grotesk',sans-serif}
+.cs-root h1,.cs-root h2,.cs-root .disp{font-family:'JetBrains Mono',sans-serif}
 .cs-root .mono{font-family:'JetBrains Mono',monospace}
 
 .cs-root .stage{padding:24px}
@@ -41,7 +41,7 @@ export const CASCADE_CSS = `
 
 .cs-root .mthumb{width:42px;height:42px;border-radius:9px;flex:none;background:var(--panel-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .cs-root .mthumb img{width:26px;height:26px;object-fit:contain}
-.cs-root .mthumb .fb{width:100%;height:100%;display:none;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:14px;letter-spacing:-.02em;color:#fff}
+.cs-root .mthumb .fb{width:100%;height:100%;display:none;align-items:center;justify-content:center;font-family:'JetBrains Mono';font-weight:700;font-size:14px;letter-spacing:-.02em;color:#fff}
 .cs-root .mthumb.pi-logo{width:22px;height:22px;border-radius:6px}
 .cs-root .mthumb.pi-logo img{width:15px;height:15px}
 .cs-root .mthumb.pi-logo .fb{font-size:10px}
@@ -112,7 +112,7 @@ export const CASCADE_CSS = `
 
 .cs-root .hero-box{background:linear-gradient(180deg,#16161b,#111116);border:1px solid var(--line-2);border-radius:20px;padding:8px;box-shadow:0 24px 60px -20px rgba(0,0,0,.7),0 0 0 1px rgba(217,255,63,.04);position:relative;transition:.2s}
 .cs-root .hero-box:focus-within{border-color:rgba(217,255,63,.4);box-shadow:0 24px 60px -20px rgba(0,0,0,.7),0 0 34px -6px rgba(217,255,63,.16)}
-.cs-root .hero-box textarea{border:none;background:transparent;resize:none;min-height:88px;max-height:200px;padding:14px 16px 4px;font-size:16.5px;line-height:1.5;font-family:'Space Grotesk',sans-serif}
+.cs-root .hero-box textarea{border:none;background:transparent;resize:none;min-height:88px;max-height:200px;padding:14px 16px 4px;font-size:16.5px;line-height:1.5;font-family:'JetBrains Mono',sans-serif}
 .cs-root .hero-box textarea:focus{border:none;background:transparent;box-shadow:none;outline:none}
 .cs-root .hero-box textarea::placeholder{color:#55555f}
 
@@ -160,7 +160,7 @@ export const CASCADE_CSS = `
 .cs-root .preset-card .pv{aspect-ratio:4/5;position:relative;overflow:hidden;background:#101015}
 .cs-root .preset-card .pv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .cs-root .pv-after{position:absolute;inset:0;overflow:hidden;clip-path:inset(0 0 0 50%)}
-.cs-root .pv-tag{position:absolute;top:8px;right:8px;font-size:9px;font-weight:700;letter-spacing:.08em;padding:2px 7px;border-radius:5px;background:rgba(217,255,63,.92);color:#0a0a0b;font-family:'Space Grotesk'}
+.cs-root .pv-tag{position:absolute;top:8px;right:8px;font-size:9px;font-weight:700;letter-spacing:.08em;padding:2px 7px;border-radius:5px;background:rgba(217,255,63,.92);color:#0a0a0b;font-family:'JetBrains Mono'}
 .cs-root .preset-card .pv .split{position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:rgba(255,255,255,.85);box-shadow:0 0 7px rgba(0,0,0,.6);pointer-events:none}
 .cs-root .preset-card .pv .split .split-h{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;color:#111}
 @keyframes csPush{from{transform:scale(1)}to{transform:scale(1.18)}}
@@ -183,9 +183,9 @@ export const CASCADE_CSS = `
 .cs-root .pv-anim-reveal{animation:csReveal 3.2s ease-out infinite alternate}
 .cs-root .pv-anim-bullet{animation:csBullet 4s ease-in-out infinite alternate}
 .cs-root .pv-anim-hero{animation:csHero 3.8s ease-in-out infinite alternate}
-.cs-root .preset-card .pro{position:absolute;bottom:8px;left:8px;font-family:'Space Grotesk';font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:6px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:#fff}
+.cs-root .preset-card .pro{position:absolute;bottom:8px;left:8px;font-family:'JetBrains Mono';font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:6px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:#fff}
 .cs-root .preset-card .pl{padding:12px 13px 14px}
-.cs-root .preset-card .pl b{font-size:14px;display:block;font-family:'Space Grotesk';font-weight:600}
+.cs-root .preset-card .pl b{font-size:14px;display:block;font-family:'JetBrains Mono';font-weight:600}
 .cs-root .preset-card .pl span{font-size:11.5px;color:var(--muted);display:block;margin-top:4px;line-height:1.4}
 .cs-root .preset-drop{width:78px;height:78px;flex:none;border:1.5px dashed var(--line-2);border-radius:11px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:10.5px;color:var(--dim);cursor:pointer;position:relative;background-size:cover;background-position:center;transition:.15s}
 .cs-root .preset-drop:hover{border-color:rgba(217,255,63,.4)}
@@ -224,7 +224,7 @@ export const CASCADE_CSS = `
 .cs-root .cap-opt:hover{border-color:var(--line-2)}
 .cs-root .cap-opt.sel{border-color:var(--acid);box-shadow:0 0 0 1px var(--acid) inset}
 .cs-root .cap-demo{height:44px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,#26263a,#0d0d13);overflow:hidden}
-.cs-root .cap-demo-txt{font-family:'Space Grotesk';font-weight:700;font-size:12px;color:#fff;text-shadow:0 1px 2px #000;white-space:nowrap;display:inline-block}
+.cs-root .cap-demo-txt{font-family:'JetBrains Mono';font-weight:700;font-size:12px;color:#fff;text-shadow:0 1px 2px #000;white-space:nowrap;display:inline-block}
 .cs-root .cap-meta{padding:6px 8px}
 .cs-root .cap-meta b{font-size:11.5px;display:block;color:var(--text)}
 .cs-root .cap-meta span{font-size:9.5px;color:var(--dim)}
@@ -260,7 +260,7 @@ export const CASCADE_CSS = `
 .cs-root .feat-card:hover{transform:translateY(-3px);border-color:rgba(217,255,63,.3);box-shadow:0 16px 40px -18px rgba(217,255,63,.25)}
 .cs-root .feat-ic{width:44px;height:44px;border-radius:12px;background:var(--acid-dim);border:1px solid rgba(217,255,63,.3);display:flex;align-items:center;justify-content:center;color:var(--acid);margin-bottom:16px}
 .cs-root .feat-ic svg{width:22px;height:22px}
-.cs-root .feat-card h3{font-family:'Space Grotesk';font-size:16px;font-weight:600;margin-bottom:7px}
+.cs-root .feat-card h3{font-family:'JetBrains Mono';font-size:16px;font-weight:600;margin-bottom:7px}
 .cs-root .feat-card p{font-size:12.5px;color:var(--muted);line-height:1.6}
 .cs-root .feat-card .feat-go{margin-top:14px;font-size:12px;color:var(--acid);font-weight:600;display:inline-flex;align-items:center;gap:5px;opacity:0;transition:.16s}
 .cs-root .feat-card:hover .feat-go{opacity:1}
@@ -305,8 +305,8 @@ export const CASCADE_CSS = `
 .cs-root .mthumb { border-radius: 8px !important; }
 .cs-root .frame { border-radius: 6px !important; }
 
-/* ── Video-Tool thumbnails: the tool title, animated, in lime + Space Grotesk ── */
+/* ── Video-Tool thumbnails: the tool title, animated, in lime + JetBrains Mono ── */
 .cs-root .vt-cover{position:relative;width:100%;height:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:0 16px;background:radial-gradient(circle at 50% 35%,#191b24,#0b0c11)}
-.cs-root .vt-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;line-height:1.15;letter-spacing:.01em;text-align:center;color:var(--acid);animation:vtGlow 2.8s ease-in-out infinite}
+.cs-root .vt-title{font-family:'JetBrains Mono',sans-serif;font-weight:700;font-size:17px;line-height:1.15;letter-spacing:.01em;text-align:center;color:var(--acid);animation:vtGlow 2.8s ease-in-out infinite}
 @keyframes vtGlow{0%,100%{opacity:.6;text-shadow:0 0 6px rgba(217,255,63,.2);transform:translateY(1px)}50%{opacity:1;text-shadow:0 0 18px rgba(217,255,63,.55);transform:translateY(-1px)}}
 `;

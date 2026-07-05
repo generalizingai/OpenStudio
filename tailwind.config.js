@@ -24,7 +24,7 @@ module.exports = {
                 muted: '#52525b',
             },
             fontFamily: {
-                sans: ['Space Grotesk', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                sans: ['JetBrains Mono', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
             },
             borderRadius: {
                 'xl': '1rem',

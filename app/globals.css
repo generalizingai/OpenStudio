@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   background: #060707;
   color: white;
-  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'JetBrains Mono', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
@@ -82,9 +82,9 @@ body::before {
    does not exist in a production build, so this rule is a no-op there). */
 nextjs-portal { display: none !important; }
 
-/* OpenStudio text wordmark - Space Grotesk Bold */
+/* OpenStudio text wordmark - JetBrains Mono Bold */
 .logo-wordmark {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'JetBrains Mono', sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -103,7 +103,7 @@ nextjs-portal { display: none !important; }
    Cascade suite (Reels / Agent / Storyboard / Scripts / Features).
    Scoped to .openfield-studio so it never touches the top nav.
    ───────────────────────────────────────────────────────────── */
-.openfield-studio { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.005em; }
+.openfield-studio { font-family: 'JetBrains Mono', 'Inter', sans-serif; letter-spacing: -0.005em; }
 
 /* section-level headings step down first (plain text-3xl / titles) */
 .openfield-studio .text-3xl { font-size: 1.5rem !important; line-height: 1.15 !important; }
@@ -156,9 +156,9 @@ nextjs-portal { display: none !important; }
 /* primary CTAs: Cascade run-hero - solid lime, black text, weight 700, 11px radius */
 .openfield-studio .bg-primary { color: #0a0a0b !important; font-weight: 700 !important; }
 
-/* Cascade headline treatment: Space Grotesk, tight tracking, no ultra-black weight */
+/* Cascade headline treatment: JetBrains Mono, tight tracking, no ultra-black weight */
 .openfield-studio h1, .openfield-studio h2, .openfield-studio h3 {
-  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  font-family: 'JetBrains Mono', 'Inter', sans-serif !important;
   letter-spacing: -0.02em !important;
 }
 .openfield-studio .font-extrabold, .openfield-studio .font-black { font-weight: 700 !important; }

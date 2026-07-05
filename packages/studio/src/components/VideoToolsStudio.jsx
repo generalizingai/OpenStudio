@@ -7,7 +7,7 @@ import { processV2V, uploadFile } from '../muapi.js';
 
 const Icon = ({ d }) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">{d}</svg>;
 
-// Thumbnail = the tool's title, animated, in lime + Space Grotesk.
+// Thumbnail = the tool's title, animated, in lime + JetBrains Mono.
 function ToolThumb({ name }) {
   return (
     <div className="vt-cover"><div className="vt-title">{name}</div></div>
