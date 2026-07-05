@@ -1,0 +1,9 @@
+services:
+  openstudio:
+    build: .
+    container_name: openstudio
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped

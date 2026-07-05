@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #060707;
+  color: white;
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Ambient black background with a very subtle faded lime shade (Higgsfield-style) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(900px 620px at 84% -12%, rgba(217,255,63,0.06), transparent 60%),
+    radial-gradient(720px 520px at -12% 112%, rgba(217,255,63,0.04), transparent 60%),
+    #060707;
+  animation: cs-breathe 16s ease-in-out infinite alternate;
+}
+@keyframes cs-breathe { from { opacity: 0.72; } to { opacity: 1; } }
+::selection { background: rgba(217,255,63,0.25); }
+
+:root {
+  --color-primary: #d9ff3f;
+  --lime: #d9ff3f;
+  --lime-dim: rgba(217,255,63,0.12);
+  --bg-app: #060707;
+  --bg-panel: #0d0e0d;
+  --bg-card: #121312;
+  --border-color: rgba(255,255,255,0.05);
+  --border-radius-xl: 0.75rem;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+.scrollbar-none::-webkit-scrollbar {
+  height: 2px;
+  width: 2px;
+}
+.scrollbar-none::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-none::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+.scrollbar-none::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.scrollbar-none {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fade-in-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+/* Hide the Next.js dev overlay indicator + issues toast (dev-only element;
+   does not exist in a production build, so this rule is a no-op there). */
+nextjs-portal { display: none !important; }
+
+/* OpenStudio text wordmark - Space Grotesk Bold */
+.logo-wordmark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Fully hidden scrollbar (used by the nav - still scrollable, no visible bar) */
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.hide-scrollbar::-webkit-scrollbar { width: 0; height: 0; display: none; }
+
+/* ─────────────────────────────────────────────────────────────
+   Cascade calibration for OpenField's original studios.
+   Tightens the type scale, radii and controls so the built-in
+   modules read in the same compact, lime-lit language as the
+   Cascade suite (Reels / Agent / Storyboard / Scripts / Features).
+   Scoped to .openfield-studio so it never touches the top nav.
+   ───────────────────────────────────────────────────────────── */
+.openfield-studio { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.005em; }
+
+/* section-level headings step down first (plain text-3xl / titles) */
+.openfield-studio .text-3xl { font-size: 1.5rem !important; line-height: 1.15 !important; }
+.openfield-studio .text-2xl { font-size: 1.2rem !important; }
+.openfield-studio .text-xl  { font-size: 1.02rem !important; }
+.openfield-studio .text-lg  { font-size: 0.92rem !important; }
+
+/* oversized empty-state heroes → compact Cascade display size
+   (declared after text-3xl so multi-class heroes land here) */
+.openfield-studio .text-4xl,
+.openfield-studio .text-5xl,
+.openfield-studio .text-6xl,
+.openfield-studio .sm\:text-4xl,
+.openfield-studio .sm\:text-5xl,
+.openfield-studio .sm\:text-6xl,
+.openfield-studio .md\:text-4xl,
+.openfield-studio .md\:text-5xl,
+.openfield-studio .md\:text-6xl,
+.openfield-studio .lg\:text-5xl,
+.openfield-studio .lg\:text-6xl {
+  font-size: 1.9rem !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* empty-state supporting copy + oversized icon frames come down too */
+.openfield-studio .md\:text-base { font-size: 0.82rem !important; }
+.openfield-studio .md\:text-lg   { font-size: 0.9rem !important; }
+
+/* Cascade uses tighter radii on panels / cards / controls */
+.openfield-studio .rounded-3xl { border-radius: 16px !important; }
+.openfield-studio .rounded-2xl { border-radius: 13px !important; }
+.openfield-studio .rounded-xl  { border-radius: 11px !important; }
+.openfield-studio .rounded-lg  { border-radius: 9px !important; }
+
+/* Cascade panels use one crisp grey hairline (~#26262b) rather than a milky white edge */
+.openfield-studio .border-white\/10,
+.openfield-studio .border-white\/\[0\.08\],
+.openfield-studio .border-white\/5,
+.openfield-studio .border-white\/\[0\.05\],
+.openfield-studio .border-white\/\[0\.03\] { border-color: rgba(255,255,255,0.09) !important; }
+
+/* Cascade panels/cards sit on a near-black panel tone (#131316-ish) */
+.openfield-studio .bg-\[\#0a0a0a\],
+.openfield-studio .bg-\[\#111111\],
+.openfield-studio .bg-\[\#111\],
+.openfield-studio .bg-panel-bg,
+.openfield-studio .bg-card-bg { background-color: #131316 !important; }
+
+/* primary CTAs: Cascade run-hero - solid lime, black text, weight 700, 11px radius */
+.openfield-studio .bg-primary { color: #0a0a0b !important; font-weight: 700 !important; }
+
+/* Cascade headline treatment: Space Grotesk, tight tracking, no ultra-black weight */
+.openfield-studio h1, .openfield-studio h2, .openfield-studio h3 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  letter-spacing: -0.02em !important;
+}
+.openfield-studio .font-extrabold, .openfield-studio .font-black { font-weight: 700 !important; }
+/* small uppercase field labels like Cascade */
+.openfield-studio .uppercase { letter-spacing: 0.1em; }
+
+/* ── Empty-state hero headlines (Image/Video/Marketing/Cinema/… studios) ──
+   Match the Cascade "Agent" headline: sentence case (first letter uppercase,
+   rest lowercase) and a white→lime gradient on the bold module name.        */
+.openfield-studio h1 span.font-medium {           /* the muted "START CREATING WITH" label */
+  display: inline-block;
+  text-transform: lowercase !important;
+  letter-spacing: 0.02em !important;
+}
+.openfield-studio h1 span.font-medium::first-letter { text-transform: uppercase; }
+
+.openfield-studio h1 span.text-white {            /* the bold module name → white→lime gradient */
+  display: inline-block;
+  text-transform: lowercase !important;
+  letter-spacing: -0.01em !important;
+  background-image: linear-gradient(90deg, #ffffff 35%, #d9ff3f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+.openfield-studio h1 span.text-white::first-letter { text-transform: uppercase; }
