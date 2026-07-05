@@ -1,5 +1,5 @@
 import './globals.css';
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -7,10 +7,10 @@ const inter = Inter({
 });
 
 // Self-hosted (via next/font) so it always loads - no reliance on a CDN @import.
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${jetbrains.variable} ${inter.variable}`}>{children}</body>
+      <body className={`${spaceGrotesk.variable} ${inter.variable}`}>{children}</body>
     </html>
   );
 }
