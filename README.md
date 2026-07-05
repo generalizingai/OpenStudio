@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="Logo.png" alt="OpenStudio" width="620">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="Logo-dark.png">
+    <img src="Logo.png" alt="OpenStudio" width="620">
+  </picture>
 </p>
 
 <p align="center"><b>An open-source AI creative studio - image, video, cinema, faceless reels, a script-to-film agent and more, all powered by your own MuAPI key.</b></p>
