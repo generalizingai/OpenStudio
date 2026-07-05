@@ -15,16 +15,36 @@ DEFAULT_PORT="3000"
 
 # ----- pretty output -----
 if [ -t 1 ]; then
-  BOLD=$'\033[1m'; LIME=$'\033[38;5;191m'; RED=$'\033[31m'; DIM=$'\033[2m'; RESET=$'\033[0m'
+  BOLD=$'\033[1m'; WHITE=$'\033[1;97m'; LIME=$'\033[1;38;5;191m'; RED=$'\033[31m'; DIM=$'\033[2m'; RESET=$'\033[0m'
 else
-  BOLD=""; LIME=""; RED=""; DIM=""; RESET=""
+  BOLD=""; WHITE=""; LIME=""; RED=""; DIM=""; RESET=""
 fi
 say() { printf "%s\n" "${LIME}▸${RESET} $*"; }
 ok()  { printf "%s\n" "${LIME}✓${RESET} $*"; }
 die() { printf "%s\n" "${RED}✗ $*${RESET}" >&2; exit 1; }
 
-printf "\n%s %s\n"  "${BOLD}${LIME}OPENSTUDIO${RESET}" "${DIM}one-command installer${RESET}"
-printf "%s\n\n" "${DIM}--------------------------------------${RESET}"
+banner() {
+  printf "\n%b" "$WHITE"
+  cat <<'ART'
+   █████   █████   █████   █   █
+   █   █   █   █   █       ██  █
+   █   █   █████   ████    █ █ █
+   █   █   █       █       █  ██
+   █████   █       █████   █   █
+ART
+  printf "%b" "$LIME"
+  cat <<'ART'
+   █████   █████   █   █   ████    █████   █████
+   █         █     █   █   █   █     █     █   █
+   █████     █     █   █   █   █     █     █   █
+       █     █     █   █   █   █     █     █   █
+   █████     █     █████   ████    █████   █████
+ART
+  printf "%b\n" "$RESET"
+  printf "%s\n\n" "${DIM}   one-command installer${RESET}"
+}
+
+banner
 
 # ----- prerequisites -----
 command -v git  >/dev/null 2>&1 || die "git is required - install it from https://git-scm.com/downloads"

@@ -14,8 +14,22 @@ $DefaultPort = 3000
 function Say($m) { Write-Host "> $m" -ForegroundColor Green }
 function Die($m) { Write-Host "x $m" -ForegroundColor Red; exit 1 }
 
-Write-Host "`nOPENSTUDIO one-command installer" -ForegroundColor Green
-Write-Host "--------------------------------------`n" -ForegroundColor DarkGray
+Write-Host ""
+@(
+  "   █████   █████   █████   █   █",
+  "   █   █   █   █   █       ██  █",
+  "   █   █   █████   ████    █ █ █",
+  "   █   █   █       █       █  ██",
+  "   █████   █       █████   █   █"
+) | ForEach-Object { Write-Host $_ -ForegroundColor White }
+@(
+  "   █████   █████   █   █   ████    █████   █████",
+  "   █         █     █   █   █   █     █     █   █",
+  "   █████     █     █   █   █   █     █     █   █",
+  "       █     █     █   █   █   █     █     █   █",
+  "   █████     █     █████   ████    █████   █████"
+) | ForEach-Object { Write-Host $_ -ForegroundColor Green }
+Write-Host "`n   one-command installer`n" -ForegroundColor DarkGray
 
 # ----- prerequisites -----
 if (-not (Get-Command git  -ErrorAction SilentlyContinue)) { Die "git is required - install from https://git-scm.com/downloads" }
