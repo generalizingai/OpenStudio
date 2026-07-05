@@ -36,3 +36,6 @@ out/
 .env
 .env.*
 !.env.example
+
+# stray design export
+OS Logo.png
